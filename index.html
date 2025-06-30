@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Digital Clock</title>
+  <title>Digital Alarm Clock</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="clock-container">
-    <h1 class="clock-title">Digital Clock</h1>
+    <h1 class="clock-title">Digital Alarm Clock</h1>
+
     <div class="clock">
       <span id="clock-hour">00</span> :
       <span id="clock-minute">00</span> :
       <span id="clock-second">00</span>
       <span id="clock-ampm"></span>
     </div>
+
+    <div class="alarm-setter">
+      <label for="alarm-time">Set Alarm:</label>
+      <input type="time" id="alarm-time">
+      <button id="set-alarm-btn">Set Alarm</button>
+    </div>
+
+    <div class="time-format-toggle">
+      <label for="time-format">24-Hour Format</label>
+      <input type="checkbox" id="time-format">
+    </div>
   </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">⏰ Alarm ringing!</div>
+
+  <!-- Alarm Audio -->
+  <audio id="alarm-audio" src="alarm.mp3" preload="auto"></audio>
 
   <script src="app.js"></script>
 </body>
